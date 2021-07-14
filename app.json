@@ -1,7 +1,7 @@
 {
   "expo": {
     "icon": "./assets/nblogo.png",
-    "slug": "kitchensinkvuenative",
+    "slug": "appstarwars",
     "orientation": "portrait",
     "primaryColor": "#cccccc",
     "packagerOpts": {
@@ -29,7 +29,7 @@
       "barStyle": "light-content",
       "backgroundColor": "#334393"
     },
-    "name": "kitchenSink-vue-native",
+    "name": "appstarwars-vue-native",
     "version": "0.1.0",
     "platforms": [
       "android",

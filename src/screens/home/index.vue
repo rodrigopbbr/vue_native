@@ -10,17 +10,14 @@
         />
       </view>
       <view class="text-container">
-        <nb-h3 :style="{ marginBottom: 8 }" class="text-color-white"
-          >App To ShowCase</nb-h3
-        >
-        <nb-h3 class="text-color-white">NativeBase Components</nb-h3>
+        <nb-h2 class="text-color-yellow">Trilogias</nb-h2>
       </view>
       <view :style="{ marginBottom: 80 }">
-        <nb-button
+        <nb-button full light
           :style="stylesObj.btnContainer"
           :onPress="handleLetGoBtnPress"
         >
-          <nb-text> Lets Go!</nb-text>
+          <nb-text> Iniciar</nb-text>
         </nb-button>
       </view>
     </image-background>
@@ -35,8 +32,8 @@ import launchscreenLogo from "../../../assets/logo-kitchen-sink.png";
 export default {
   props: {
     navigation: {
-      type: Object
-    }
+      type: Object,
+    },
   },
   data() {
     return {
@@ -44,24 +41,26 @@ export default {
       launchscreenLogo,
       stylesObj: {
         logoContainerStyle: {
-          marginTop: Dimensions.get("window").height / 8
+          marginTop: Dimensions.get("window").height / 8,
         },
         logoStyle: {
           left: Platform.OS === "android" ? 40 : 50,
-          top: Platform.OS === "android" ? 35 : 60
+          top: Platform.OS === "android" ? 35 : 60,
         },
         btnContainer: {
-          backgroundColor: "#6faf98",
-          alignSelf: "center"
-        }
-      }
+          // backgroundColor: "#6faf98",
+          backgroundColor: "yellow",
+          alignSelf: "center",
+          borderRadius: 20
+        },
+      },
     };
   },
   methods: {
     handleLetGoBtnPress() {
       this.navigation.openDrawer();
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -75,20 +74,26 @@ export default {
 }
 .logoContainer {
   flex: 1;
-  margin-bottom: 30;
+  margin-bottom: 20;
 }
 .logo {
   position: absolute;
-  width: 280;
+  /* width: 280; */
+  width: 200;
+  /* height: 100; */
   height: 100;
 }
 .text-container {
   align-items: center;
-  margin-bottom: 50;
+  margin-top: 2px;
+  margin-bottom: 50px;
   background-color: transparent;
 }
 .text-color-white {
   color: white;
+}
+.text-color-yellow {
+  color: yellow;
 }
 .button-container {
   background-color: #6faf98;
