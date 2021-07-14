@@ -6,6 +6,11 @@
         class="drawer-cover"
         :style="stylesObj.drawerCoverObj"
       />
+      <!-- <image
+        :source="drawerImage"
+        class="drawer-image"
+        :style="stylesObj.drawerImageObj"
+      /> -->
       <nb-list>
         <nb-list-item
           v-for="data in datas"
@@ -15,10 +20,28 @@
           :onPress="() => handleListItemClick(data)"
         >
           <nb-left>
+            <nb-icon
+              active
+              :name="data.icon"
+              :style="{ color: '#777', fontSize: 26, width: 30 }"
+            />
             <nb-text>
               {{ data.name }}
             </nb-text>
           </nb-left>
+          <nb-right v-if="data.types" :style="{ flex: 1 }">
+            <nb-badge
+              class="list-item-badge-container"
+              :style="{ backgroundColor: data.bg }"
+            >
+              <nb-text
+                class="list-item-badge-text"
+                :style="stylesObj.badgeText"
+              >
+                {{ `${data.types}` }}
+              </nb-text>
+            </nb-badge>
+          </nb-right>
         </nb-list-item>
       </nb-list>
     </nb-content>
@@ -65,7 +88,27 @@ export default {
           icon: "easel",
           bg: "#1EBC7C",
           types: "3",
-        }
+        },
+        {
+          name: "Personagens",
+          route: "Personagens",
+          icon: "people-circle-outline",
+          bg: "#1EBC7C",
+          types: "10",
+        },
+{
+          name: "Símbolos",
+          route: "Simbolos",
+          icon: "map",
+          bg: "#1EBC7C",
+          types: "7",
+        },        
+        {
+          name: "Sobre",
+          route: "About",
+          icon: "phone-portrait",
+          bg: "#C5F442",
+        },        
       ],
     };
   },

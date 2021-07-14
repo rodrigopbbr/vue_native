@@ -18,6 +18,7 @@
     <nb-content padder>
       <nb-text class="titulo">I. A História de Darth Vader</nb-text>
       <nb-text class="subtitulo">Episódios I, II e III</nb-text>
+      <!-- <image :source="require('dart-vader.jpeg')" /> -->
       <nb-text
         >Apesar de ter sido lançada depois da trilogia original, essa é a
         primeira trilogia na ordem cronológica da série Star Wars. Nela é
@@ -27,11 +28,13 @@
 
       <nb-text class="titulo">II. A História de Luke Skywalker</nb-text>
       <nb-text class="subtitulo">Episódios IV, V e VI</nb-text>
+      <!-- <image :source="require('dart-vader.jpeg')" /> -->
       <nb-text>Essa foi primeira trilogia da saga, porém sua história se passa após a trilogia I.</nb-text>
       <nb-text>Nela Luke Skywalker se aventura pela galáxia para atender a um pedido de socorro da princesa Leia e batalha contra Darth Vader.</nb-text>
 
       <nb-text class="titulo">III. A História de Rey</nb-text>
       <nb-text class="subtitulo">Episódios VII, VIII e IX</nb-text>
+      <!-- <image :source="require('dart-vader.jpeg')" /> -->
       <nb-text>Enquanto surge uma nova ameaça para a galáxia, Rey, uma catadora de sucata, e Finn, um soldado imperial desertor, devem se juntar a Han Solo e Chewbacca para procurar a única esperança de restaurar a paz da galáxia.</nb-text>
     </nb-content>
 
